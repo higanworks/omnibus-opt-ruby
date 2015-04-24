@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Perform necessary opt-ruby setup steps
+# after package is installed.
+#
+
+PROGNAME=$(basename $0)
+INSTALLER_DIR=/opt/ruby-2.1.5
+RUBY_DIR=/opt/ruby
+
+function error_exit
+{
+  echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  exit 1
+}
+
+[ -L $RUBY_DIR ] && rm -f $RUBY_DIR
+ln -sf $INSTALLER_DIR $RUBY_DIR || error_exit "Cannot link $INSTALLER_DIR to $RUBY_DIR"
+
+echo "Thank you for installing opt-ruby!"
+
+exit 0

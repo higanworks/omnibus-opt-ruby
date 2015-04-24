@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Perform necessary opt-ruby removal steps
+# after package is uninstalled.
+#
+
+RUBY_DIR=/opt/ruby
+
+echo "opt-ruby has been uninstalled!"
+
+rm -f $RUBY_DIR
+
+exit 0
