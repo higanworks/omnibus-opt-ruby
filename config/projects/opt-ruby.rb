@@ -54,7 +54,11 @@ dependency "version-manifest"
 
 ## libs for me
 # dependency "mysql2"
-override :postgresql, version: '9.4.0'
+override :postgresql,
+  version: '9.4.1',
+  source: {
+  md5: "2cf30f50099ff1109d0aa517408f8eff"
+  }
 dependency "postgresql"
 
 exclude "**/.git"

@@ -30,8 +30,8 @@ default_version '2.1.5'
 
 build do
   env = with_standard_compiler_flags(with_embedded_path)
-  command "rmdir #{install_dir}/bin", :env => env
-  command "ln -fs #{install_dir}/embedded/bin #{install_dir}/bin", :env => env
+  command "rm -rf #{install_dir}/bin", :env => env
+  link "#{install_dir}/embedded/bin", "#{install_dir}/bin"
 
   ## Ref: https://github.com/ryotarai/omnibus-software/pull/1/files
   mkdir "#{install_dir}/embedded/ssl/certs"
