@@ -37,13 +37,9 @@ override :ruby, version: '2.1.6'
 
 
 dependency "ruby"
-override :rubygems,
-  version: "2.4.6",
-  source: {
-  md5: "5909df4829e5350ca431644322ea9e89"
-  }
+override :rubygems, version: "2.4.5"
 dependency "rubygems"
-override :bundler, version: '1.9.4'
+override :bundler, version: '1.10.6'
 # dependency "ffi-yajl"
 dependency "bundler"
 dependency "opt-ruby"
