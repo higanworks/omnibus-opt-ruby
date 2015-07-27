@@ -11,7 +11,7 @@ homepage "http://higanworks.com"
 # Defaults to C:/opt-ruby on Windows
 # and /opt/opt-ruby on all other platforms
 
-build_version '2.1.5'
+build_version '2.1.6'
 build_iteration 1
 
 install_dir "#{default_root}/ruby-#{build_version}"
@@ -28,11 +28,11 @@ dependency "preparation"
 
 
 
-override :ruby, version: '2.1.5'
+override :ruby, version: '2.1.6'
 #override :ruby,
-#  version: "2.2.0",
+#  version: "2.2.2",
 #  source: {
-#  md5: "cd03b28fd0b555970f5c4fd481700852"
+#  md5: "326e99ddc75381c7b50c85f7089f3260"
 #  }
 
 
@@ -54,11 +54,7 @@ dependency "version-manifest"
 
 ## libs for me
 # dependency "mysql2"
-override :postgresql,
-  version: '9.4.1',
-  source: {
-  md5: "2cf30f50099ff1109d0aa517408f8eff"
-  }
+override :postgresql, version: '9.4.1'
 dependency "postgresql"
 
 exclude "**/.git"

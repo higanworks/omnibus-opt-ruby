@@ -16,7 +16,7 @@
 
 # These options are required for all software definitions
 name "omnibus-ruby"
-default_version '2.1.5'
+default_version '2.1.6'
 
 # A software can specify more than one version that is available for install
 # version("1.2.6") { source md5: "618e944d7c7cd6521551e30b32322f4a" }

@@ -9,7 +9,7 @@ if [ ! "$RETRY" == "true" ] ; then
 fi
 # bundle exec kitchen converge -c 4
 
-# for plat in centos-6 ubuntu ; do
+# for plat in ubuntu ; do
 for plat in centos-6 ubuntu ; do
   bundle exec kitchen converge ${plat}
   bundle exec kitchen exec ${plat} -c "sudo ${RUBYPATH}/gem install bundler --no-ri --no-rdoc"

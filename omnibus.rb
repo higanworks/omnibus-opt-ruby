@@ -40,7 +40,10 @@
 # solaris_compiler 'gcc'
 # build_retries 5
 # fetcher_read_timeout 120
-fetcher_retries 5
+
+## after 4.0.1
+# fetcher_retries 5
+
 
 # Load additional software
 # ------------------------------
