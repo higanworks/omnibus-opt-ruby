@@ -5,7 +5,7 @@
 #
 
 PROGNAME=$(basename $0)
-INSTALLER_DIR=/opt/ruby-2.1.5
+INSTALLER_DIR=/opt/ruby-2.2.4
 RUBY_DIR=/opt/ruby
 
 function error_exit
